@@ -8,7 +8,7 @@ const containsNumberSquared = function (numbers, aNumber) {
     return false;
 }
 
-const checkNumber = function (numbers, aNumber) {
+const checkNumber = function () {
     // Function to handle html processing
     const numberText = document.getElementById('numbers');
     let numberToSquare = document.getElementById('numberToSquare').value;
