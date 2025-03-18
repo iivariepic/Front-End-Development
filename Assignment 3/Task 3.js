@@ -14,7 +14,7 @@ for (let key in musician) {
 // Implement also another musician object.
 const musician2 = {
     name: 'Kirka',
-    realName: 'Kirill Babitz',
+    realName: 'Kirill Babitzin',
     instrument: {
         type: 'vocal'
     }
