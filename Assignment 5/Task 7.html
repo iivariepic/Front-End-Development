@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Balloon Popper</title>
+    <style>
+        body {
+            margin: 0;
+        }
+        #balloon {
+            display: inline;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+<p id="balloon">🎈</p>
+<script>
+    function changeSize(amount) {
+        const balloon = document.getElementById("balloon");
+        const currentSize = window.getComputedStyle(balloon).fontSize;
+        const currentSizeValue = parseFloat(currentSize);
+        const newSize = currentSizeValue + amount;
+        balloon.style.fontSize = newSize + "px";
+        return newSize;
+    }
+
+    function blowUp() {
+        const balloon = document.getElementById("balloon");
+        balloon.textContent = "💥";
+        removeEventListener("keydown", onKeyDown)
+    }
+
+    function onKeyDown(event) {
+        if (event.key === "ArrowUp") {
+            let newSize = changeSize(5);
+            if (newSize > 100) {
+                blowUp()
+            }
+        }
+        else if (event.key === "ArrowDown") {
+            changeSize(-5);
+        }
+        event.preventDefault();
+    }
+
+    addEventListener("keydown", onKeyDown);
+
+</script>
+</body>
+</html>
