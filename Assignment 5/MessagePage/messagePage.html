@@ -8,19 +8,24 @@
 <label for="newMessage">Enter a Message:</label>
 <input type="text" id="newMessage">
 <button id="submitMessage" disabled>Submit</button>
+<br>
+<button id="clearMessages">Clear Messages</button>
+<div id="messageContainer"></div>
 <script src="addMessage.js"></script>
+<script src="clearMessages.js"></script>
 <script>
     // Event listening
-    const button = document.getElementById("submitMessage");
+    const submitButton = document.getElementById("submitMessage");
+    const clearButton = document.getElementById("clearMessages");
     const inputField = document.getElementById("newMessage");
 
-    // Function to toggle the button if the input field is empty
+    // Function to toggle the submit button if the input field is empty
     function toggleButton() {
-        button.disabled = inputField.value.trim() === "";
+        submitButton.disabled = inputField.value.trim() === "";
     }
 
-    // Make the button add the message and clear the field
-    button.addEventListener("click", function () {
+    // Make the submit button add the message and clear the field
+    submitButton.addEventListener("click", function () {
         addMessage();
         document.getElementById('newMessage').value = '';
         toggleButton();
@@ -28,6 +33,10 @@
 
     // Check if there is text inside the text field
     inputField.addEventListener("input", toggleButton);
+
+    // Make the clear button clear the messages
+    clearButton.addEventListener("click", clearMessages)
+
 </script>
 </body>
 </html>
