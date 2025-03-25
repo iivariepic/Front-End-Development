@@ -5,10 +5,16 @@
     <title>Message Page</title>
 </head>
 <body>
-<label for="newMessage">Enter Message:</label>
+<label for="newMessage">Enter a Message:</label>
 <input type="text" id="newMessage">
 <button id="submitMessage">Submit</button>
 <script src="addMessage.js"></script>
-<script src="eventListener.js"></script>
+<script>
+    const button = document.getElementById("submitMessage");
+    button.addEventListener("click", function () {
+        addMessage(); // Call your function
+        document.getElementById('newMessage').value = ''; // Clear the input field
+    });
+</script>
 </body>
 </html>
