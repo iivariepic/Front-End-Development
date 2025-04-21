@@ -18,3 +18,10 @@ function getPrice(itemId, quantity) {
 }
 
 export { setPriceList, getPrice };
+
+const PriceList = {
+    setPriceList,
+    getPrice
+};
+
+export default PriceList;
