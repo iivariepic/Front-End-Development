@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Window Open Example</title>
+</head>
+<body>
+<h1>Open a New Window</h1>
+<button onclick="openNewWindow()">Open Window</button>
+
+<script>
+    function openNewWindow() {
+        const url = "https://www.youtube.com/watch?v=jAXioRNYy4s&t=4s";
+        const windowName = "NewWindow";
+        const windowFeatures = "width=600,height=400,top=100,left=100,resizable=yes,scrollbars=yes";
+        window.open(url, windowName, windowFeatures);
+    }
+</script>
+</body>
+</html>
