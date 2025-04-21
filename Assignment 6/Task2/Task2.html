@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Local Storage Test</title>
+</head>
+<body>
+  <h1>Local Storage Test</h1>
+  <div>
+    <label for="name">Enter name:</label>
+    <input type="text" id="name" placeholder="Enter your name here">
+
+    <script>
+      // Add stored value when the page loads
+      window.addEventListener('DOMContentLoaded', () => {
+          const storedName = localStorage.getItem('name');
+          if (storedName !== null) {
+              document.getElementById('name').value = storedName
+          }
+      });
+
+      // Save the value when the input loses focus
+      document.getElementById('name').addEventListener('blue', (event) => {
+         localStorage.setItem('name', event.target.value)
+      });
+    </script>
+  </div>
+</body>
+</html>
