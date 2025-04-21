@@ -23,3 +23,4 @@ PriceList.setPriceList(samplePrices);
 console.log(PriceList.getPrice(1, 50));
 console.log(PriceList.getPrice(2, 150));
 console.log(PriceList.getPrice(3, 30));
+

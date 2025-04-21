@@ -10,3 +10,4 @@ window.addEventListener('DOMContentLoaded', () => {
 document.getElementById('name').addEventListener('blur', (event) => {
     storage.saveName(event.target.value)
 })
+

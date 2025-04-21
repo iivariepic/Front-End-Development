@@ -1,4 +1,4 @@
-import { setPriceList, getPrice } from "./priceList.js";
+const { PriceList } = require('./priceList');
 
 const samplePrices = [
     {
@@ -23,3 +23,4 @@ setPriceList(samplePrices);
 console.log(getPrice(1, 50));
 console.log(getPrice(2, 150));
 console.log(getPrice(3, 30));
+
