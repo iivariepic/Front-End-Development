@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Email form</title>
+</head>
+<body>
+<form novalidate>
+  <p>
+    <label for="mail">
+      <span>Please enter an email address:</span>
+      <input type="email" id="mail" name="mail" required minlength="8" />
+      <span class="error" aria-live="polite"></span>
+    </label>
+  </p>
+  <p>
+    <label for="username">
+      <span>Enter a username:</span>
+      <input type="text" id="username" name="username" required minlength="5" pattern="^[a-zA-Z0-9]+$" />
+      <span class="error" aria-live="polite"></span>
+    </label>
+  </p>
+  <button>Submit</button>
+</form>
+
+<script src="formValidation.js"></script>
+</body>
+</html>
+
